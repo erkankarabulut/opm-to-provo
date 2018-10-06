@@ -87,7 +87,8 @@ public class Main {
 
         newDocument += "</prov:document>";
         try{
-            java.io.FileWriter fw = new java.io.FileWriter("/home/erkan/Desktop/result.xml");
+            System.out.println("Dir: " + System.getProperty("user.dir"));
+            java.io.FileWriter fw = new java.io.FileWriter(System.getProperty("user.dir") + "/data/result.xml");
             fw.write(newDocument);
             fw.close();
         }catch (Exception e){
