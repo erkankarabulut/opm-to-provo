@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by nAcer (Stu) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://pti.iu.edu/OPMPlugin"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="plugin">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="importAttributes">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="process">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="attribute" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+												<xs:element name="attributeName"/>
+												<xs:element name="importName"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="artifact">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="attribute" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+												<xs:element name="attributeName"/>
+												<xs:element name="importName"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="causalDependencies"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="visualAttributes">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="nodeLabel">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="processLabel">
+											<xs:complexType>
+												<xs:sequence maxOccurs="unbounded">
+												<xs:element name="attributeName"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="artifactLabel">
+											<xs:complexType>
+												<xs:sequence maxOccurs="unbounded">
+												<xs:element name="attributeName"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
